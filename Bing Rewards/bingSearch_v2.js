@@ -1,11 +1,5 @@
 /* 
 🏆Bing Task v2.3
-[task_local]
-36 10 * * * https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch_v2.js, tag=🏆BingSearch Task, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Opinion_Rewards.png, enabled=false
-⚠️注意事项:
-    v1版本用于单账号搜索任务快速执行,也可以使用BoxJS多会话实现多账号
-    v2版本支持多账号搜索任务&lowking积分任务,Cookies以严格JSON格式填入
-    JSON格式检查: https://www.bejson.com/json/format/
 🥳脚本功能: 
     ✅兼容执行@mcdasheng搜索任务
     ✅兼容执行@lowking积分任务
@@ -13,6 +7,35 @@
     ❎国区每日签到      (不好写)
     ❎外区每日任务      (手做任务都失败,写锤子)
     ❎外区浏览任务      (目前不在外区做任务了,先不写了~)
+使用方法：
+1、
+在boxjs中v2的cookie中，填写如下内容，后三个参数在v1中可以查到
+Cookies格式:
+    [{
+        "account": "example1@qqq.com",
+        "bingPointCookieKey": "",
+        "bingSearchCookiePCKey": "",
+        "bingSearchCookieMobileKey": ""
+    },{
+        "account": "example2@qqq.com",
+        "bingPointCookieKey": "",
+        "bingSearchCookiePCKey": "",
+        "bingSearchCookieMobileKey": ""
+    }]
+
+
+
+2、
+在配置中加入如下内容，在http请求里会直接出现定时任务 手动在http请求里一个个添加也行
+[task_local]
+36 10 * * * https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch_v2.js, tag=🏆BingSearch Task, img-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Opinion_Rewards.png, enabled=false
+
+
+⚠️注意事项:
+    v1版本用于单账号搜索任务快速执行,也可以使用BoxJS多会话实现多账号
+    v2版本支持多账号搜索任务&lowking积分任务,Cookies以严格JSON格式填入
+    JSON格式检查: https://www.bejson.com/json/format/
+
 📍地区选择:
     详见v1版本中注释: https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.js
 📦BoxJs地址:
@@ -26,18 +49,7 @@
     bing_cookies:   多账号Cookie,严格JSON格式
     bing_timeout:   执行任务时间,超时自动结束任务,默认50s
     bing_interval:  搜索间隔,默认2s
-Cookies格式:
-    [{
-        "account": "example1@qqq.com",
-        "bingPointCookieKey": "",
-        "bingSearchCookiePCKey": "",
-        "bingSearchCookieMobileKey": ""
-    },{
-        "account": "example2@qqq.com",
-        "bingPointCookieKey": "",
-        "bingSearchCookiePCKey": "",
-        "bingSearchCookieMobileKey": ""
-    }]
+
 */
 
 const $ = new Env("Bing任务");
