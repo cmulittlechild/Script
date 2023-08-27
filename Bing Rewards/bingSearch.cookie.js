@@ -4,6 +4,10 @@
   pc_Cookie: Bing web登录,搜索 'pc' 
          or  ipad app登录,搜索 'pc' 
   mb_Cookie: Bing app登录,搜索 'testt'
+
+直接iphone safari浏览器，打开bing.com，搜索testt，提示获取cookie成功，此时获取的事mobile的cookie：SRCHHPGUSR=SRCHLANG=en xxxx
+再次打开bing.com，开启桌面模式，搜索pc，如果一次不成功，多试几次即可,此时获取的是pc的cookie：MUIDB=3F01C5xxxx
+
 BoxJs订阅地址:
     https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
 
