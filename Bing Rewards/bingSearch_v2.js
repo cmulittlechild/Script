@@ -10,6 +10,13 @@
 使用方法：
 1、
 在boxjs中v2的cookie中，填写如下内容，后三个参数在v1中可以查到
+
+获取 Cookie：
+        面板 Cookie,可用于lowking脚本、本脚本
+        https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingPoint.cookie.js
+        移动端 & pc端 Cookie,用于本脚本
+        https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.cookie.js
+
 Cookies格式:
     [{
         "account": "example1@qqq.com",
