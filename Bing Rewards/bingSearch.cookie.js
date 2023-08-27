@@ -1,20 +1,11 @@
 /* 
 脚本功能: 获取 bingSearch Cookie（手机和电脑都要获取）
+
 操作步骤: 
-  pc_Cookie: Bing web登录,搜索 'pc' 
-         or  ipad app登录,搜索 'pc' 
-  mb_Cookie: Bing app登录,搜索 'testt'
-
-直接iphone safari浏览器，打开bing.com，搜索testt，提示获取cookie成功，此时获取的事mobile的cookie：SRCHHPGUSR=SRCHLANG=en xxxx
-再次打开bing.com，开启桌面模式，搜索pc，如果一次不成功，多试几次即可,此时获取的是pc的cookie：MUIDB=3F01C5xxxx
-
-BoxJs订阅地址:
-    https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
-
-    
+1、
 直接在重写的规则资源里添加 https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.cookie.js  
-获取两个cookie成功后再把√去掉即可
-以下内容放到配置里
+
+或者以下内容放到配置里
 [rewrite_local]
 外区: 也可以用于获取国区cookie,执行任务无效请打开"强制国区"开关
 ^https\:\/\/www\.bing\.com\/search\?q=pc&.* url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingSearch.cookie.js
@@ -25,6 +16,22 @@ BoxJs订阅地址:
 
 [mitm]
 hostname = www.bing.com, cn.bing.com
+
+
+2、
+直接iphone safari浏览器，打开bing.com，搜索testt，提示获取cookie成功，此时获取的事mobile的cookie：SRCHHPGUSR=SRCHLANG=en xxxx
+再次打开bing.com，开启桌面模式，搜索pc，如果一次不成功，多试几次即可,此时获取的是pc的cookie：MUIDB=3F01C5xxxx
+
+3、
+获取两个cookie成功后再把√去掉即可
+
+4、
+BoxJs订阅地址:
+    https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/mcdasheng.boxjs.json
+
+5、
+打开boxjs.com，可在v1里看到point和手机，电脑的cookie，一共三个，可以按照json格式填写后放到v2使用
+
 */
 
 const $ = new Env("bingSearchCookie");
