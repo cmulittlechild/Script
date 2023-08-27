@@ -1,6 +1,6 @@
 /* 
 脚本功能: 获取 bing面板cookie,用于lowking脚本
-操作步骤: web访问 https://rewards.bing.com 登录即可
+操作步骤: QX配置中加入如下内容  web访问 https://rewards.bing.com 登录 提示成功获取cookie即可
 [rewrite local]
 ^https\:\/\/rewards\.bing\.com url script-request-header https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/bingPoint.cookie.js
 [MITM]
